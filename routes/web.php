@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PageController::class, "index"])->name("homepage");
+Route::get('/movie_detail{id}', [PageController::class, "movieDetail"])->name("movie-detail");
