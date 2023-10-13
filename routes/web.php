@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,16 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $title= "Homepage";
-    $comics= config("db");
-
-    // dd($comics);
-    return view('home', compact("title", "comics"));
-})->name("homepage");
-
-Route::get('/about', function () {
-$title= "about";
-
-    return view('about', compact("title"));
-})->name("about");
+Route::get('/', [PageController::class, "index"])->name("homepage");
