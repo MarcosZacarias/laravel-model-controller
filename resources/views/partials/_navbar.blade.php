@@ -11,7 +11,7 @@
                   <a class="nav-link {{Route::currentRouteName() == "homepage" ? "active" : ""}}" href="{{ route("homepage") }}" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link {{Route::currentRouteName() == "about" ? "active" : ""}}" href="{{ route("about") }}">about</a>
+                  <a class="nav-link ">about</a>
               </li>
               
           </ul>
