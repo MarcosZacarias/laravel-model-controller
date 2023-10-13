@@ -1,13 +1,16 @@
 @extends('layouts.app')
 
 
-@section('page-title', $title)
-
+@section('page-title')
+{{env("APP_NAME")}} - {{$title}}
+@endsection
 @section('main-content')
+  {{-- Grid Movies --}}
   <div class="container py-2">
     <div class="row row-cols-1 row-cols-md-3 g-4">
       @foreach ($movies as $movie)
       <div class="col">
+        {{-- Cards Movies --}}
         <div class="card h-100">
           {{-- <img src="..." class="card-img-top" alt="..."> --}}
           <div class="card-body">
